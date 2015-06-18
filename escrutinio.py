@@ -48,3 +48,10 @@ desestimadas = (set(fpcs) & set(pro) & set(fpv))
 set(pro) - desestimadas   # set([1725, 270, 5351])
 set(fpcs) - desestimadas  # set([6852, 1478, 134, 7591, 5485, 4501, 6555, 1845])
 set(fpv) - desestimadas   # set([1478, 7591, 5545, 4912, 7601, 1845, 4950, 4729, 6555, 6333])
+
+# Finalmente me guardo una copia de los archivos XML para futuras revisiones
+
+for x in mesas:
+    archivo = open("mesa_%d.xml" % x, "w")
+    archivo.write(mesas[k])
+    archivo.close()
